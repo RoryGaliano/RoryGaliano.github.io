@@ -85,9 +85,18 @@ var level01 = function(window) {
             }
             game.addGameItem(enemy);
         };
-        createEnemy(400, groundY - 10);
+        createEnemy(400, groundY - 30);
         createEnemy(800, groundY - 100);
         createEnemy(1200, groundY - 50);
+        createEnemy(1600, groundY - 65);
+        createEnemy(2000, groundY - 60);
+        createEnemy(2200, groundY - 40);
+        createEnemy(400, groundY - 90);
+        createEnemy(800, groundY - 200);
+        createEnemy(1200, groundY - 100);
+        createEnemy(1600, groundY - 105);
+        createEnemy(2000, groundY - 70);
+        createEnemy(2200, groundY - 90);
     };
 };
 

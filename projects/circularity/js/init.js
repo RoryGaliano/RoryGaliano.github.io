@@ -71,6 +71,7 @@ var init = function(window) {
         function update() {
             // TODO 4 : Update the circle's position //
             // TODO 4 : Update the circle's position //
+            // it's better to write     circleNumber < circles.length
             for (var circleNumber = 0; circleNumber <= 999; circleNumber++) {
                 updateCircle(circleNumber);
             }
