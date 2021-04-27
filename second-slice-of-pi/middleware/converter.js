@@ -4,7 +4,7 @@ module.exports = function() {
 	return function (req, res, next) {
 		// TODO 2: Create the converter function
 		if (req.result) {
-			res.send(req.result);
+			
 			if (req.accepts('html')) {
 				let transform = {'<>': 'div', 'html': [
 					{'<>': 'p', 'html': [
@@ -21,6 +21,9 @@ module.exports = function() {
 					]}
 				]};
 				res.send(json2html.transform(req.result, transform));
+			}
+			else {
+			res.send(req.result);
 			}
 		} else {
 			next();
