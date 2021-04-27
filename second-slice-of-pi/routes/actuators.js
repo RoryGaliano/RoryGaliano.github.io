@@ -7,5 +7,6 @@ var express = require('express'),
 module.exports = router;
 
 router.route('/leds/:id').get(function (req, res, next) {
-	res.send(resources.pi.actuators.leds[req.params.id]);
+	req.result = resources.pi.actuators.leds[req.params.id];
+	next();
 });
