@@ -22,4 +22,4 @@ app.use(converter());
 module.exports = app;
 
 var actuatorRoutes = require("./../routes/actuators");
-app.use('/pi/sensors', sensorRoutes);
+app.use('/pi/actuators', actuatorRoutes);
