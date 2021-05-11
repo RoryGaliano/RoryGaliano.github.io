@@ -28,7 +28,9 @@ exports.listen = function (server) {
 			console.error("Error: The URL that we where trying to subscribe to is invalid");
 			return;
 		} else {
-			utils.monitor(resource, refreshRate, ws.send);
+			utils.monitor(resource, refreshRate, function(changes) {
+				ws.send(JSON.stringify(changes));
+			});
 		}
 	});
 };
