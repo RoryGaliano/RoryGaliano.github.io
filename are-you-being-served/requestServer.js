@@ -3,6 +3,7 @@
 const { RSA_NO_PADDING } = require("constants");
 const http = require("http");
 const request = require("request");
+var args = process.argv.slice(2);
 var port = 8686;
 
 var server = http.createServer(function(req,res){
@@ -13,7 +14,8 @@ var server = http.createServer(function(req,res){
     res.end('World!');
     */
 
-   request('http://example.com', function(error, response, body) {
+   request('http://rorygaliano.github.io', function(error, response, body) {
+     var url = args[0] ? args[0] : "http://rorygaliano.github.io";
      if (!error && response.statusCode === 200) {
         res.writeHead(200, {"Content-Type": "text/html"})
         res.write(body);
